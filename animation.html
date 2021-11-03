@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<style type="text/css">
+		body {
+			background-color: lightblue;
+			height: 800px;
+			width: 1425px;
+		}
+		#marble {
+			 width: 100px;
+			 height: 100px;
+			 background: red;
+			 background-size: contain;
+			 background-repeat: no-repeat;
+			 position: absolute;
+			 top: 200px;
+			 left: 5%;
+			 animation: marble 5s infinite;
+			 			background-image:url(ball.png);
+
+		}
+
+		@keyframes marble {
+			0%   {top: 0px;}
+			25%  {top: 200px;}
+			75%  {top: 50px}
+			100% {top: 100px;}
+		}
+	</style>
+</head>
+<body>
+	<div id="marble">
+	</div>
+</body>
+</html>
