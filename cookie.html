@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie Explosion</title>
+	<style type="text/css">
+		body {
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		function makeCookie (){
+			var cookie = document.createElement("div")
+			document.body.appendChild(cookie);
+			cookie.style.height = "200px";
+			cookie.style.width = "200px";
+			cookie.style.backgroungRepeat = "no-repeat";
+			cookie.style.backgroundSize = "contain";
+			cookie.style.backgroundImage = "url(cookie1.png)";
+			cookie.style.display = "inline-block"
+			cookie.addEventListener("click", function(){
+				cookie.style.backgroundImage = "url(cookie2.png)"
+			})
+		}
+		setInterval (makeCookie, 800)
+	</script>
+
+</body>
+</html>
