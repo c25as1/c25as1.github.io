@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ajai's Website</title>
+	<style type="text/css">
+		#Welcome {
+			font-size: 75px;
+			text-align: center;
+			padding-top: 4%;
+			color: white;
+		}
+
+
+		#Goal {
+			height: 600px;
+			background-image: url(goal.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: relative;
+			z-index: -20;
+		}
+
+		.column {
+			float: left;
+			width: 47%;
+			height: 50%;
+			color: blue;
+			text-align: center;
+			font-size: 40px;
+		}
+
+		#journal {
+			padding-top: 10%;
+			padding-left: 6%;
+		}
+
+		#projects {
+			padding-top: 10%;
+		}
+
+		#aboutme {
+			padding-top: 5%;
+			padding-left: 6%;
+		}
+
+		#description {
+			font-size: 25px;
+			color: white;
+			text-align: center;
+			padding-left: 25%;
+			padding-right: 25%;
+		}
+
+		#nothing {
+			padding-top: 5%;
+		}
+		#ball {
+			background-image: url(ball.png);
+			height: 60px;
+			width: 60px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: -10;
+			position: absolute;
+		}
+		body {
+			background-color: lightblue;
+		}
+
+		a{
+			z-index: -5;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div id="Welcome">
+		This is my website!
+	</div>
+	<div id="description">
+		Click on a corner of the goal to move to different parts of the website
+	</div>
+	<div class="row">
+		<a href="jounal.html">
+			<div id="journal" class="column">
+				<h2>Journal</h2>
+			</div>
+		</a>
+		<a href="projects.html">
+			<div id="projects" class="column">
+				<h2>Projects</h2>
+			</div>
+		</a>
+		<a href="aboutme.html">
+			<div id="aboutme" class="column">
+				<h2>About Me</h2>
+			</div>
+		</a>
+		<div id="nothing" class="column">
+			<h2>Nothing</h2>
+		</div>
+	</div>
+	<div id="Goal">
+	</div>
+	<div id="ball">
+	</div>
+	<script type="text/javascript">
+		
+		var soccerball = document.getElementById('ball');
+
+		document.addEventListener("mousemove",
+
+			function (event){
+				console.log(event.clientX, event.clientY);
+				soccerball.style.left = event.clientX + "px";
+				soccerball.style.top = event.clientY + "px";
+		})
+	</script>
+</body>
+
+</html>

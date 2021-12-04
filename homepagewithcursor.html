@@ -18,6 +18,8 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
+			position: relative;
+			z-index: -20;
 		}
 
 		.column {
@@ -60,17 +62,22 @@
 			width: 60px;
 			background-repeat: no-repeat;
 			background-size: contain;
+			z-index: -10;
+			position: absolute;
 		}
 		body {
 			background-color: lightblue;
 		}
 
+		a{
+			z-index: -5;
+		}
+
+
 	</style>
 </head>
 
 <body>
-	<div id="ball">
-	</div>
 	<div id="Welcome">
 		This is my website!
 	</div>
@@ -102,6 +109,20 @@
 				</div>
 		</div>		
 	</div>
+	<div id="ball">
+	</div>
+	<script type="text/javascript">
+		
+		var soccerball = document.getElementById('ball');
+
+		document.addEventListener("mousemove",
+
+			function (event){
+				console.log(event.clientX, event.clientY);
+				soccerball.style.left = event.clientX + "px";
+				soccerball.style.top = event.clientY + "px";
+		})
+	</script>
 </body>
 
 </html>
