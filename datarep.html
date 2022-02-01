@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Representation</title>
+	<style type="text/css">
+		body {
+			background-color: lightblue;
+		}
+		.ytstyle {
+			width: 50px;
+			height: 50px;
+			background-image: url(yt.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 5px;
+			display: inline-block;
+		}
+		.snapstyle {
+			width: 50px;
+			height: 50px;
+			background-image: url(snap.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 5px;
+			display: inline-block;
+		}
+		.imessstyle {
+			width: 50px;
+			height: 50px;
+			background-image: url(imess.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 5px;
+			display: inline-block;
+		}
+		.safstyle {
+			width: 50px;
+			height: 50px;
+			background-image: url(saf.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 5px;
+			display: inline-block;
+		}
+		.schstyle {
+			width: 50px;
+			height: 50px;
+			background-image: url(sch.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 5px;
+			display: inline-block;
+		}
+		.othstyle {
+			width: 50px;
+			height: 50px;
+			background-image: url(oth.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 5px;
+			display: inline-block;
+		}
+
+		.ststyle {
+			width: 50px;
+			height: 50px;
+			background-image: url(st.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 5px;
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="description">
+		This is my data representation of how much time I spend on my phone and what apps I use most. Click to see the apps.
+	</div>
+
+	<script type="text/javascript">
+		
+		var counter = 0;
+
+		function other (h) {
+			var oth = document.createElement("div");
+			document.body.appendChild(oth);
+			oth.classList.add("othstyle");
+		}
+
+		function safari (h) {
+			var saf = document.createElement("div");
+			document.body.appendChild(saf);
+			saf.classList.add("safstyle");
+		}
+
+		function messages (h) {
+			var imess = document.createElement("div");
+			document.body.appendChild(imess);
+			imess.classList.add("imessstyle");
+		}
+
+		function snapchat (h) {
+			var snap = document.createElement("div");
+			document.body.appendChild(snap);
+			snap.classList.add("snapstyle");
+		}
+		
+		function school (h) {
+			var sch = document.createElement("div");
+			document.body.appendChild(sch);
+			sch.classList.add("schstyle");
+		}
+
+		function stratton (h) {
+			var st = document.createElement("div");
+			document.body.appendChild(st);
+			st.classList.add("ststyle");
+		}
+		
+		function youtube (h) {
+			var yt = document.createElement("div");
+			document.body.appendChild(yt);
+			yt.classList.add("ytstyle");
+		}
+
+		document.addEventListener("click",function(){		
+			counter=counter + 1;
+			console.log(counter);
+			if (counter == 1) {
+				for(var i = 1; i<31; i =i + 1){
+					other()
+				}
+			}
+			else  if (counter ==3){
+				for(var i = 1; i<32; i = i + 1){
+					safari()
+				}
+			}
+			else  if (counter ==4){
+				for(var i = 1; i<36; i = i + 1){
+					messages()
+				}
+			}
+			else  if (counter ==5){
+				for(var i = 1; i<51; i = i + 1){
+					snapchat()
+				}
+			}
+			else  if (counter ==6){
+				for(var i = 1; i<72; i = i + 1){
+					school()
+				}
+			}
+			else  if (counter ==7){
+				for(var i = 1; i<94; i = i + 1){
+					stratton()
+				}
+			}
+			else  if (counter ==8){
+				for(var i = 1; i<1044; i = i + 1){
+					youtube()
+				}
+			}
+		})
+
+	</script>
+
+</body>
+</html>

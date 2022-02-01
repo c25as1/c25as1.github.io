@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ice Cream Drawing</title>
+	<style type="text/css">
+    #title {
+      font-size: 75px;
+      text-align: center;
+    }
+    #home {
+			font-size: 40px;
+			position: absolute; top: 5px; left: 11px;
+			color: navy;
+		}
+	.icecream {
+		background-image: url("icecream.png");
+		width: 100px;
+		height: 100px;
+		background-size: contain;
+		position: absolute;
+		z-index: 10;
+		background-repeat: no-repeat;
+	}
+    body {
+    	background-color: lightblue;
+    }
+	</style>
+</head>
+<body>
+  <div id="title">
+  Ice Cream Drawing
+  </div>
+  <a href="index.html">
+  	<div id="home">
+  		Home
+  	</div>
+  </a>
+  <script type="text/javascript">
+  	document.addEventListener ("mousemove", makeIceCream);
+  	
+  	function makeIceCream (event) {
+  		console.log(event);
+  		var iceCream = document.createElement('div');
+  		document.body.appendChild(iceCream);
+  		iceCream.classList.add('icecream');
+  		iceCream.style.left = event.clientX + "px";
+  		iceCream.style.top = event.clientY + "px";
+  	}
+  </script>
+</body>
+</html>

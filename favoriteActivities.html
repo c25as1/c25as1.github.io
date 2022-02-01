@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Practice</title>
+	<style type="text/css">
+    #title {
+      font-size: 75px;
+      text-align: center;
+    }
+    #home {
+			font-size: 40px;
+			position: absolute; top: 5px; left: 11px;
+			color: navy;
+		}
+    .message {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .box {
+      font-size: 150px;
+    }
+    body {
+    	background-color: lightblue;
+    }
+	</style>
+</head>
+<body>
+  <div id="title">
+ My favorite activities!!
+  </div>
+  <a href="index.html">
+  <!-- 	<div id="home">
+  		Home
+  	</div> -->
+  </a>
+
+  <div id="box"></div>
+  <script type="text/javascript">
+    // document.addEventListener ("click", hello);
+
+    // function hello (event) {
+    //   console.log (event);
+    //   var message = document.createElement ('div');
+    //   document.body.appendChild(message);
+    //   message.classList.add('message');
+    // }
+
+
+    var favoriteEmojis = ["⚽️", "🎾", "⛳️", "⛷", "🏂", "🎮", "🚲", "🏌🏽‍♂️", "🏄🏽‍♂️", "⛵️"]
+
+    document.addEventListener("click", function(){
+        var x = Math.round(Math.random()*9);
+          // console.log(x)
+          var box = document.getElementById('box');
+         box.innerText = box.innerText + favoriteEmojis[x]
+         box.classList.add('box')
+    })
+
+  </script>
+</body>
+</html>

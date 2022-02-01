@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+	<title>Everything I Need to Know</title>
+	
+	<style type="text/css">
+		
+		p{
+			font-family: 'nunito';
+			color: blue;
+			font-size: 30px;
+		}
+
+		#ajai {
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			margin: 10px;
+		}
+		/*.square*/ #ball {
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			margin: 10px;
+			background-image: url(ball.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			position: relative;
+			display: inline-block;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<p>
+		<a href="https://www.nike.com/t/flight-soccer-ball-rPkJLP/DA5635-100">
+			My favorite soccer ball
+		</a>
+	</p>
+
+	<div id="ajai">
+		ajai
+	</div>
+
+	<div id="ball" class="square"></div>
+	<!-- <div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div> -->
+
+	<script type="text/javascript">
+		
+		var soccerBall = document.getElementById("ball");
+
+		function sayHello (x) {
+			console.log("hi" + x)
+		}
+
+		sayHello("ajai");
+
+	</script>
+
+</body>
+</html>

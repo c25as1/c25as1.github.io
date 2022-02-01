@@ -4,6 +4,9 @@
 <head>
 	<title>Ajai's Website</title>
 	<style type="text/css">
+		* {
+			cursor: none;
+		}
 		#Welcome {
 			font-size: 75px;
 			text-align: center;
@@ -58,8 +61,8 @@
 		}
 		#ball {
 			background-image: url(ball.png);
-			height: 60px;
-			width: 60px;
+			height: 40px;
+			width: 40px;
 			background-repeat: no-repeat;
 			background-size: contain;
 			z-index: -10;
@@ -115,7 +118,7 @@
 		
 		var soccerball = document.getElementById('ball');
 
-		document.addEventListener("mousemove",
+		window.addEventListener("mousemove",
 
 			function (event){
 				console.log(event.clientX, event.clientY);
