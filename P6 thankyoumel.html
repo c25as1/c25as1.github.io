@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thank You</title>
+	<style type="text/css">
+		#thankyou {
+			font-size: 60px;
+			text-align: center;
+		}
+
+		#click {
+			font-size: 20px;
+			text-align: center;
+		}
+
+		.messtyle {
+			font-size: 40px;
+			text-align: center;
+			
+		}
+
+		#m1 {
+			left:20%;
+			position: absolute;
+			height:100px;
+			width:300px;
+			font-size: 30px;
+		}
+
+		#m2 {
+			left:60%;
+			position: absolute;
+			height:100px;
+			width:300px;
+			font-size: 30px;
+		}
+
+		#m3 {
+			left:30%;
+			top: 30%;
+			position: absolute;
+			height:100px;
+			width:300px;
+			font-size: 30px;
+		}
+
+		body {
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<div id="thankyou">
+		THANK YOU MEL!
+	</div>
+	<div id="click">
+		Click to see more
+	</div>
+	<div class="messages" id="m1"></div>
+	<div class="messages" id="m2"></div>
+	<div class="messages" id="m3"></div>
+
+	<script type="text/javascript">
+		var counter = 0;
+
+		function m1InnerText () {
+			m1.innerText = "Thank You for being an amazing Peer Leader!"
+		}
+		
+		function m2InnerText () {
+			m2.innerText = "I appreciate all of the time you have put into creating the lessons and helping us with our transition to highschool!"
+		}
+
+		function m3InnerText () {
+			m3.innerText = "It was so helpful to have another familiar and kind face!"
+		}
+
+		document.addEventListener("click",function(){		
+			counter=counter + 1;
+			console.log(counter);
+			if (counter == 1) {
+					m1InnerText()
+			}
+			else  if (counter ==2){
+					m2InnerText()
+			}
+			else  if (counter ==3){
+					m3InnerText()
+			}
+		})
+	</script>
+</body>
+</html>

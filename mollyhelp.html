@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#whatever{
+			opacity:0;
+			width:100px;
+			background-color: lightblue;
+			height:100px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="whatever">
+
+		hello!!!!!
+		
+
+	</div>
+
+	<script type="text/javascript">
+		var whatever = document.getElementById('whatever');
+		
+		document.addEventListener("click", function(){
+			console.log('here?')
+			whatever.innerHTML = "Hello, you're the best!"
+		})
+
+
+			document.addEventListener("click", function(){
+			whatever.style.opacity = "1"
+		})
+
+			
+	</script>
+
+</body>
+</html>

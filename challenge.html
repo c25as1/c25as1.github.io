@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenge</title>
+	<style type="text/css">
+		.divs {
+			height: 100px;
+			width: 100px;
+		}
+		#a {
+			background-color: red;
+			font-family: "Lucida Console", "Courier New", monospace;
+			color: blue;
+			font-size: 60px;
+		}
+		#a:hover {
+			transition: 1s;
+			background-color: yellow;
+		}
+		#b {
+			background-color: blue;
+			font-family: "Times New Roman", Times, serif;
+			color: yellow;
+			font-size: 40px;
+		}
+		#b:hover {
+			transition: 1s;
+			background-color: pink;
+		}
+		#c {
+			background-color: orange;
+			font-family: Arial, Helvetica, sans-serif;
+			color: grey;
+			font-size: 50px;
+		}
+		#c:hover {
+			transition: 1s;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="divs" id="a">
+		1
+	</div>
+	<div class="divs" id="b">
+		2
+	</div>
+	<div class="divs" id="c">
+		3
+	</div>
+	<a href="index.html">
+		<div id="link">
+			Link to my Home Page
+		</div>
+	</a>
+	<div>
+		JavaScript Challenge
+	</div>
+	<div id="color">
+		When you click on the cookie it will change
+	</div>
+
+	<script type="text/javascript">
+		function makeCookie (){
+			var cookie = document.createElement("div")
+			document.body.appendChild(cookie);
+			cookie.style.height = "200px";
+			cookie.style.width = "200px";
+			cookie.style.backgroungRepeat = "no-repeat";
+			cookie.style.backgroundSize = "contain";
+			cookie.style.backgroundImage = "url(./images/cookie1.png)";
+			cookie.style.display = "inline-block"
+			cookie.addEventListener("click", function(){
+				cookie.style.backgroundImage = "url(./images/cookie2.png)"
+			})
+		}
+		makeCookie ()
+		function makeonehundredcookies (){
+			var cookie = document.createElement("div")
+			document.body.appendChild(cookie);
+			cookie.style.height = "200px";
+			cookie.style.width = "200px";
+			cookie.style.backgroungRepeat = "no-repeat";
+			cookie.style.backgroundSize = "contain";
+			cookie.style.backgroundImage = "url(./images/cookie1.png)";
+			cookie.style.display = "inline-block"
+			cookie.addEventListener("click", function(){
+				cookie.style.backgroundImage = "url(./images/cookie2.png)"
+			})
+		}
+		document.addEventListener("click", function(){
+			cookie.style.backgroundImage = "url(./images/cookie2.png)"
+			})
+	</script>
+</body>
+</html>

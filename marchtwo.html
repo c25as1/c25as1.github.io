@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenge</title>
+</head>
+<body>
+	<div id="array"></div>
+	<script type="text/javascript">
+		var names = ["miles", "jhansi", "arav", "mouhamed"]
+		var x = 0
+		document.addEventListener("click", function(){
+			console.log(names[x])
+			x = x+1;
+			if (x>3) {
+				x=0
+			}
+		})
+		// document.addEventListener("click",function(){
+		// 	document.body.appendChild("div")
+		// 	document.getElementById("array").innerHTML = x;
+		// })
+	</script>
+</body>
+</html>
