@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ping Pong Clicker</title>
+	<style type="text/css">
+		.ball {
+			background-image: url(./images/ball.png);
+			width: 100px;
+			height: 100px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			transition: 2s;
+		} 
+		/*this part gives the ball style (background image, size, etc.)*/
+
+	</style>
+</head>
+<body>
+	<audio id="sound" src="https://mojopi.github.io/killingCorona/pew.wav"></audio>
+
+	<div id="counter">Counter: 0</div>
+	<!-- this creates the div for the counter -->
+
+	<script type="text/javascript">
+		var pew = document.getElementById('sound');
+		// this sets up the sound that plays when you click a ball. this is able to be refrenced later in the code.
+		var x = 0;
+		// this is a step we take in advance for the counter. it is relevant later on
+
+		function createBall(){
+			var ball = document.createElement('div');
+			document.body.appendChild(ball);
+
+			function changePosition(){
+				ball.style.left=1000*Math.random()+"px";
+				ball.style.top=1000*Math.random()+"px";
+			}
+			changePosition();
+
+			setInterval(changePosition, 2000)
+
+			ball.classList.add("ball");
+
+	
+			ball.addEventListener("click", function(){
+				console.log("hi");
+				x = x + 1;
+				console.log(x);
+				ball.classList.remove("ball")
+				pew.play()
+				counter.innerText = "Counter: " + x;
+			})
+
+		};
+		// this function creates the ball, gives it a random position, sets how often the balls should change position, gives the ball its style, and adds an eventListener for when you click.
+
+		setInterval(createBall, 1000);
+		// this tells the code how often to run the function createBall
+
+	</script>
+</body>
+</html>
