@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sky on the lake</title>
+	<style type="text/css">
+    #title {
+    	font-size: 75px;
+    	text-align: center;
+    }
+    #home {
+    	font-size: 40px;
+    	position: absolute; top: 5px; left: 11px;
+    	color: navy;
+	}
+    .message {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    #box {
+      font-size: 150px;
+      width:1000px;
+      height:600px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    body {
+    	background-color: lightblue;
+    }
+	</style>
+</head>
+<body>
+  <div id="title">
+ Photos of the sky at the lake!
+  </div>
+  <a href="index.html">
+  	<div id="home">
+  		Home
+  	</div>
+  </a>
+
+  <div id="box"></div>
+  <script type="text/javascript">
+    // document.addEventListener ("click", hello);
+
+    // function hello (event) {
+    //   console.log (event);
+    //   var message = document.createElement ('div');
+    //   document.body.appendChild(message);
+    //   message.classList.add('message');
+    // }
+
+
+    var photos = ["./images/1.JPG", "./images/2.JPG", "./images/3.JPG", "./images/4.JPG", "./images/5.JPG", "./images/6.JPG", "./images/7.JPG", "./images/8.JPG", "./images/9.JPG", "./images/10.JPG", "./images/11.JPG", "./images/12.JPG", "./images/13.JPG", "./images/14.JPG", "./images/15.JPG", "./images/16.JPG", "./images/17.JPG", "./images/18.JPG", "./images/19.JPG"]
+
+    document.addEventListener("click", function(){
+        var x = Math.round(Math.random()*18);
+          console.log(x)
+          var box = document.getElementById('box');
+         box.style.backgroundImage = "url(" + photos[x] + ")";
+    })
+
+  </script>
+</body>
+</html>
