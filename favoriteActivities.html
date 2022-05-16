@@ -47,10 +47,10 @@
     // }
 
 
-    var favoriteEmojis = ["⚽️", "🎾", "⛳️", "⛷", "🏂", "🎮", "🚲", "🏌🏽‍♂️", "🏄🏽‍♂️", "⛵️"]
+    var favoriteEmojis = ["⚽️", "🎾", "⛳️", "⛷", "🏂", "🎮", "🚲", "🏌🏽‍♂️", "🏄🏽‍♂️", "⛵️","⚽️"]
 
     document.addEventListener("click", function(){
-        var x = Math.round(Math.random()*9);
+        var x = Math.round(Math.random()*10);
           // console.log(x)
           var box = document.getElementById('box');
          box.innerText = box.innerText + favoriteEmojis[x]
